@@ -39,7 +39,7 @@ GEM
     tilt (2.0.10)
 
 PLATFORMS
-  x86_64-darwin-19
+  ruby
 
 DEPENDENCIES
   rspec
@@ -47,5 +47,8 @@ DEPENDENCIES
   simplecov
   sinatra
 
+RUBY VERSION
+   ruby 2.5.3p105
+
 BUNDLED WITH
-   2.2.7
+   2.1.4
