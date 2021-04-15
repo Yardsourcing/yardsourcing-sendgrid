@@ -1,0 +1,15 @@
+language: ruby
+rbenv:
+- 2.5.3
+addons:
+  postgresql: 9.6
+before_install:
+- gem install bundler:2.1.4
+- nvm install --lts
+script:
+- bundle exec rspec
+deploy:
+  provider: heroku
+  api_key:
+    secure: "ebay5G4B4WqX5HhZxx0QJ+lCMMMNgWpCKHJQoJvn7cv+NKlLq3tpBpj3dXlYLKAuZnxwh57KoRz19CDTSl86Km6djUgGFUxsLgKyC14BgWZ1kCtig2KB1fe/jMHoZhX/8bujLhvcppvPft6j2hvkaSCerRl9A9uUtiLWSQufL/O28Uqd/ALWXs/abxERifajAdUXXwdlj4JdaWLtmCfazJCac7gj54nJJ+ZZHImvTuCyVHie1NYXNt1DVAypRx5BtUXVU17ycyKtcmg8GS26UOiE1YzNoqvdhUvVIbdDIOV2Qmxk6aqPb1fxrXQiixCNEtrShg4uzp6cRzELk9l2IVqohKi0DojmAWXP8X7odhCpfgmsNoxxssNiHxKdC5kB29faGPK3Za6vZxnsBZvsrNC8qLpAqa/vl7VGxu3omNM5bPOOuEIoUOy6PJt5YffCmGGdNBospD2ko+YN75yeRwjXig6ZOhawD39mA4nq6vB7xcDC7zqDfWDXXG7DeERQKIDJd2UlPf+ChtHeffCNsoah/t+8WeN7jfka/FjENOEpguXGqfTMGXHrh7g7diiDBeOuE/BdCQrVR2VU7XUcwNyTHxf+VIMiDehS5Qp8arrl2rpDR85GOitOdwO/waCahDzy9sy0HRR6kHZrTTWsaXLdgaoDF6PDbiGZcXoa0bQ="
+  app: peaceful-bastion-57477
