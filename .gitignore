@@ -1,7 +1,5 @@
 # Ignore test coverage
-/coverage/*
-
-/config/sendgrid_env.yml
+coverage
 
 # Ignore application configuration
 /config/application.yml
