@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'sendgrid-ruby'
 require 'bundler'
+require 'figaro/sinatra'
 Bundler.require
 
 class SandgridApi < Sinatra::Base

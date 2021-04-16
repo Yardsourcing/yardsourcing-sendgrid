@@ -8,9 +8,10 @@ ruby '2.5.3'
 
 gem 'sinatra'
 gem 'sendgrid-ruby'
-gem 'figaro'
+
 group :development, :test do
   gem 'rspec'
+  gem 'figaro', git: 'https://github.com/bpaquet/figaro.git', branch: 'sinatra'
 end
 
 group :test do
