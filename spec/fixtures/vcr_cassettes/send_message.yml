@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.sendgrid.com/v3/mail/send
+    body:
+      encoding: UTF-8
+      string: '{"from":{"email":"angelbreaux@hotmail.com"},"subject":"BDAY BASH","personalizations":[{"to":[{"email":"doug.welchons@gmail.com"}]}],"content":[{"type":"text/plain","value":"You
+        are Invited to my party!"}]}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - sendgrid/6.4.0;ruby
+      Authorization:
+      - Bearer sendgrid_api_key
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 202
+      message: Accepted
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 16 Apr 2021 17:48:34 GMT
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Message-Id:
+      - x8O2hu44RKy93RgdxioAuQ
+      Access-Control-Allow-Origin:
+      - https://sendgrid.api-docs.io
+      Access-Control-Allow-Methods:
+      - POST
+      Access-Control-Allow-Headers:
+      - Authorization, Content-Type, On-behalf-of, x-sg-elas-acl
+      Access-Control-Max-Age:
+      - '600'
+      X-No-Cors-Reason:
+      - https://sendgrid.com/docs/Classroom/Basics/API/cors.html
+      Strict-Transport-Security:
+      - max-age=600; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Fri, 16 Apr 2021 17:48:34 GMT
+recorded_with: VCR 6.0.0
