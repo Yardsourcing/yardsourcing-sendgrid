@@ -1,5 +1,7 @@
 require 'sinatra'
 require 'sendgrid-ruby'
+require 'figaro/sinatra'
+require 'pry'
 require 'bundler'
 require 'figaro/sinatra'
 Bundler.require
