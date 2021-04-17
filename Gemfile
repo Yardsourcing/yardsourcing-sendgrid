@@ -8,11 +8,13 @@ ruby '2.5.3'
 
 gem 'sinatra'
 gem 'sendgrid-ruby'
+gem 'fast_jsonapi'
+gem 'sinatra-jsonp'
+gem 'sinatra-contrib'
 
 group :development, :test do
   gem 'figaro', git: 'https://github.com/bpaquet/figaro.git', branch: 'sinatra'
   gem 'rspec'
-  gem 'figaro', git: 'https://github.com/bpaquet/figaro.git', branch: 'sinatra'
 end
 
 group :test do
@@ -23,4 +25,5 @@ group :test do
   gem 'vcr'
   gem 'capybara'
   gem 'pry'
+  gem 'launchy'
 end

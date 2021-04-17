@@ -4,7 +4,7 @@ require 'spec_helper'
 
 ENV['APP_ENV'] = 'test'
 
-RSpec.describe SandgridApi do
+RSpec.describe SandgridApi, type: :request do
 include Rack::Test::Methods
 
   def app
