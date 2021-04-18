@@ -26,13 +26,13 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Fri, 16 Apr 2021 17:48:34 GMT
+      - Sun, 18 Apr 2021 19:50:40 GMT
       Content-Length:
       - '0'
       Connection:
       - keep-alive
       X-Message-Id:
-      - x8O2hu44RKy93RgdxioAuQ
+      - RCx9-7-VQWCcyQQI_k1AIw
       Access-Control-Allow-Origin:
       - https://sendgrid.api-docs.io
       Access-Control-Allow-Methods:
@@ -48,5 +48,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Fri, 16 Apr 2021 17:48:34 GMT
+  recorded_at: Sun, 18 Apr 2021 19:50:40 GMT
 recorded_with: VCR 6.0.0
