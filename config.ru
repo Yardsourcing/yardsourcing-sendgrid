@@ -1,5 +1,5 @@
 require 'bundler'
-require 'figaro/sinatra'
+require './sendgrid_api'
 Bundler.require
 
 # require File.expand_path('../config/environment',  __FILE__)
