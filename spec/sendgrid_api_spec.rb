@@ -13,7 +13,7 @@ include Rack::Test::Methods
 
   it 'can send emails' do
     VCR.use_cassette('send_message') do
-      post '/mail?to=doug.welchons@gmail.com&from=angelbreaux@hotmail.com&booking_name=BDAY BASH&description=You are Invited to my party!'
+      post '/mail?to=doug.welchons@gmail.com&from=angelbreaux@hotmail.com&subject=BDAY BASH&content=You are Invited to my party!'
 
       expect(last_response.status).to eq(200)
     end

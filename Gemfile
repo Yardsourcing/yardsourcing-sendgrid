@@ -11,6 +11,7 @@ gem 'sendgrid-ruby'
 gem 'fast_jsonapi'
 gem 'sinatra-jsonp'
 gem 'sinatra-contrib'
+gem 'require_all'
 gem 'figaro', git: 'https://github.com/bpaquet/figaro.git', branch: 'sinatra'
 
 group :development, :test do
