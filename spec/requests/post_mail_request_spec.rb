@@ -18,7 +18,7 @@ include Rack::Test::Methods
         body = JSON.parse(last_response.body, symbolize_names: true)
 
         expect(last_response.status).to eq(202)
-        expect(body[:message]).to eq("Message sent sucscessfully")
+        expect(body[:message]).to eq("Message sent successfully")
       end
     end
   end
