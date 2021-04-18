@@ -1,8 +1,7 @@
 require 'sinatra'
+require 'bundler'
 require 'sendgrid-ruby'
 require 'figaro/sinatra'
-require 'pry'
-require 'bundler'
 require 'sinatra/json'
 require "sinatra/jsonp"
 require "sinatra/namespace"
