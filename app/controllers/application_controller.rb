@@ -42,7 +42,9 @@ register Sinatra::Namespace
 
   def valid_params?(params)
     return false unless it_exists?(params[:from])
+    return false unless (params[:from] =~ /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i) == 0
     return false unless it_exists?(params[:to])
+    return false unless (params[:to] =~ /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i) == 0
     return false unless it_exists?(params[:subject])
     return false unless it_exists?(params[:content])
     true
