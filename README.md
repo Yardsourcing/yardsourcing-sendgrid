@@ -87,7 +87,7 @@ In the spirit of collaboration, things done together are better than done on our
 
 ### Roadmap
 
-See the [open issues](https://github.com/Gvieve/rails-engine) for a list of proposed features (and known issues). Please open an issue ticket if you see an existing error or bug.
+See the [open issues](https://github.com/Yardsourcing/yardsourcing-sendgrid/issues) for a list of proposed features (and known issues). Please open an issue ticket if you see an existing error or bug.
 
 ### Contributors
 - [Angel Breaux](https://github.com/abreaux26)
