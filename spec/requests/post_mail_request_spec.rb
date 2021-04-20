@@ -32,6 +32,7 @@ include Rack::Test::Methods
 
         expect(last_response.status).to eq(400)
         expect(body[:message]).to eq("There was an error proccessing your request")
+        expect(body[:error]).to eq("From email does not exist.")
       end
 
       it "when 'from' email address is not proper email format" do
@@ -40,6 +41,7 @@ include Rack::Test::Methods
 
         expect(last_response.status).to eq(400)
         expect(body[:message]).to eq("There was an error proccessing your request")
+        expect(body[:error]).to eq("From email is not in the proper format.")
       end
 
       it "when 'from' email is an empty string" do
@@ -48,6 +50,7 @@ include Rack::Test::Methods
 
         expect(last_response.status).to eq(400)
         expect(body[:message]).to eq("There was an error proccessing your request")
+        expect(body[:error]).to eq("From email does not exist.")
       end
 
       it "when 'to' email is missing" do
@@ -56,6 +59,7 @@ include Rack::Test::Methods
 
         expect(last_response.status).to eq(400)
         expect(body[:message]).to eq("There was an error proccessing your request")
+        expect(body[:error]).to eq("To email does not exist.")
       end
 
       it "when 'to' email is an empty string" do
@@ -64,6 +68,7 @@ include Rack::Test::Methods
 
         expect(last_response.status).to eq(400)
         expect(body[:message]).to eq("There was an error proccessing your request")
+        expect(body[:error]).to eq("To email does not exist.")
       end
 
       it "when 'to' email address is not proper email format" do
@@ -72,6 +77,7 @@ include Rack::Test::Methods
 
         expect(last_response.status).to eq(400)
         expect(body[:message]).to eq("There was an error proccessing your request")
+        expect(body[:error]).to eq("To email is not in the proper format.")
       end
 
       it "when 'subject' is missing" do
@@ -80,6 +86,7 @@ include Rack::Test::Methods
 
         expect(last_response.status).to eq(400)
         expect(body[:message]).to eq("There was an error proccessing your request")
+        expect(body[:error]).to eq("Subject does not exist.")
       end
 
       it "when 'subject' is an empty string" do
@@ -88,6 +95,7 @@ include Rack::Test::Methods
 
         expect(last_response.status).to eq(400)
         expect(body[:message]).to eq("There was an error proccessing your request")
+        expect(body[:error]).to eq("Subject does not exist.")
       end
 
       it "when 'content' is missing" do
@@ -96,6 +104,7 @@ include Rack::Test::Methods
 
         expect(last_response.status).to eq(400)
         expect(body[:message]).to eq("There was an error proccessing your request")
+        expect(body[:error]).to eq("Content does not exist.")
       end
 
       it "when 'content' is an empty string" do
@@ -104,6 +113,7 @@ include Rack::Test::Methods
 
         expect(last_response.status).to eq(400)
         expect(body[:message]).to eq("There was an error proccessing your request")
+        expect(body[:error]).to eq("Content does not exist.")
       end
     end
 

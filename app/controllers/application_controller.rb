@@ -17,10 +17,11 @@ register Sinatra::Namespace
     end
 
     post '/mail' do
-      if valid_params?(params)
+      continue, msg = valid_params?(params)
+      if continue
         send_email(params)
       else
-        [400, ({message: "There was an error proccessing your request"}).to_json]
+        [400, ({message: "There was an error proccessing your request", error: msg}).to_json]
       end
     end
   end
@@ -41,12 +42,12 @@ register Sinatra::Namespace
   end
 
   def valid_params?(params)
-    return false unless it_exists?(params[:from])
-    return false unless (params[:from] =~ /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i) == 0
-    return false unless it_exists?(params[:to])
-    return false unless (params[:to] =~ /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i) == 0
-    return false unless it_exists?(params[:subject])
-    return false unless it_exists?(params[:content])
+    return [false, "From email does not exist."] unless it_exists?(params[:from])
+    return [false, "From email is not in the proper format."] unless (params[:from] =~ /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i) == 0
+    return [false, "To email does not exist."] unless it_exists?(params[:to])
+    return [false, "To email is not in the proper format."] unless (params[:to] =~ /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i) == 0
+    return [false, "Subject does not exist."] unless it_exists?(params[:subject])
+    return [false, "Content does not exist."] unless it_exists?(params[:content])
     true
   end
 
