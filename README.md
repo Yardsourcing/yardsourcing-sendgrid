@@ -1,5 +1,7 @@
 # Yardsourcing Sendgrid API Microservice
 
+The Yardsourcing SendGrid API Microservice is a lightweight API modular service that consumes SendGrid's email API. It can be hooked into your existing application to send email communications to your users.
+
 ### Created by:
 - [Angel Breaux](https://github.com/abreaux26) | [LinkedIn](https://www.linkedin.com/in/angel-breaux)
 - [Doug Welchons](https://github.com/DougWelchons/) | [LinkedIn](https://www.linkedin.com/in/douglas-welchons)
@@ -8,9 +10,6 @@
 - [Alexa Morales Smyth](https://github.com/amsmyth1) | [LinkedIn](https://www.linkedin.com/in/moralesalexa/)
 - [Jenny Branham](https://github.com/jbranham1) | [LinkedIn](https://www.linkedin.com/in/jenny-branham)
 - [Genevieve Nuebel](https://github.com/Gvieve) | [LinkedIn](https://www.linkedin.com/in/genevieve-nuebel)
-
-
-The Yardsourcing SendGrid API Microservice is a lightweight API modular service that consumes SendGrid's email API. It can be hooked into your existing application to send email communications to your users.
 
 #### Built With
 * [Sinatra](http://sinatrarb.com/)
