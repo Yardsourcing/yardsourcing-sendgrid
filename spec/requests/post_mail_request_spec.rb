@@ -1,6 +1,7 @@
 require 'rack/test'
 require 'spec_helper'
 require './app/controllers/application_controller'
+require 'pry'
 
 ENV['APP_ENV'] = 'test'
 
@@ -107,13 +108,14 @@ include Rack::Test::Methods
     end
 
     describe 'edge case' do
-      xit "returns a 400 error when sendgrid api does not respond with 202" do
-        response = stub_request(:get, "#{ENV['ys_engine_url']}/api/v1/yards/1")
-      .to_return(status: [500, error], headers: {})
+      it "returns a 400 error when sendgrid api does not respond with 202" do
         post '/api/v1/mail?to=doug.welchons@gmail.com&from=angelbreaux@hotmail.com&subject=BDAY BASH&content=You are Invited to my party!'
-        body = JSON.parse(last_response.body, symbolize_names: true)
 
-        expect(last_response.status).to eq(202)
+        response = stub_request(:post, "/api/v1/mail?to=doug.welchons@gmail.com&from=angelbreaux@hotmail.com&subject=BDAY BASH&content=You are Invited to my party!")
+      .to_return(status: 500, headers: {})
+        # body = JSON.parse(last_response.body, symbolize_names: true)
+
+        expect(last_response.status).to eq(400)
         expect(body[:message]).to eq("Message sent successfully")
       end
     end
