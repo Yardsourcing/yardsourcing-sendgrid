@@ -36,8 +36,6 @@ register Sinatra::Namespace
     response = sg.client.mail._('send').post(request_body: mail.to_json)
     if response.status_code == "202"
       [202, ({message: "Message sent successfully"}).to_json]
-    else
-      [400, ({message: "There was an error proccessing your request"}).to_json]
     end
   end
 
