@@ -34,11 +34,7 @@ register Sinatra::Namespace
     mail = Mail.new(from, subject, to, content)
     sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])
     response = sg.client.mail._('send').post(request_body: mail.to_json)
-    if response.status_code == "202"
-      [202, ({message: "Message sent successfully"}).to_json]
-    else
-      [400, ({message: "There was an error proccessing your request"}).to_json]
-    end
+    [response.status_code.to_i, ({message: "Message sent successfully"}).to_json]
   end
 
   def valid_params?(params)
