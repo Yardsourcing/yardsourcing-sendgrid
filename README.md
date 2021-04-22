@@ -57,6 +57,13 @@ These instructions will get you a copy of the project up and running on your loc
   $ bundle exec ruby applicationcontroller.rb
   ```
 
+5. Set up Environment Variables
+      - run `bundle exec figaro install`
+      - add the below variables to the `config/application.yml`
+    ```
+      SENDGRID_API_KEY:'<YOU_SENDGRID_API_KEY>'
+    ```
+
 ### Endpoints
 ##### Mail
 - POST request to send email
@@ -74,6 +81,8 @@ These instructions will get you a copy of the project up and running on your loc
 ```
 $ bundle exec rspec
 ```
+### Project Architecture
+<p style="text-align:center;"><img src="ys_design.png" width="600"></p>
 
 ### How to Contribute
 
