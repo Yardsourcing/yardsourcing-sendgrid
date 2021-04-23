@@ -1,11 +1,20 @@
-# Yardsourcing Sendgrid API Microservice
+# Yardsourcing Sendgrid Microservice
 
-The Yardsourcing SendGrid API Microservice is a lightweight API modular service that consumes SendGrid's email API. It can be hooked into your existing application to send email communications to your users.
+The Yardsourcing SendGrid Microservice is a lightweight modular service that consumes SendGrid's email API. It can be hooked into your existing application to send email communications to your users.
+
+This app is currently being used by our backend engine for Yardsourcing, a web application that connects hosts with users looking to rent a yard. The Yardsourcing app is built with service oriented architecture using this Microservice for email (see [Project Architecture](#project-architecture)). It exposes a single API endpoint that triggers an email request.
+
+### Related Repos
+To explore the full web application, please visit the built out front end application that hooks into this engine and its endpoints.
+- [Yardsourcing - frontend](https://github.com/Yardsourcing/yardsourcing-frontend#readme).
+
+To set up automatic email confirmation, please visit the Sendgrid microservice.
+- [Yardsourcing Engine](https://github.com/Yardsourcing/yardsourcing-engine#readme)
 
 ### Created by:
 - [Angel Breaux](https://github.com/abreaux26) | [LinkedIn](https://www.linkedin.com/in/angel-breaux)
 - [Doug Welchons](https://github.com/DougWelchons/) | [LinkedIn](https://www.linkedin.com/in/douglas-welchons)
-- [Dominic Padula]() | [LinkedIn]()
+- [Dominic Padula](https://github.com/domo2192) | [LinkedIn](https://www.linkedin.com/in/dominic-padula-5bb5b2179/)
 - [Jordan Beck](https://github.com/jordanfbeck0528) | [LinkedIn](https://www.linkedin.com/in/jordan-f-beck/)
 - [Alexa Morales Smyth](https://github.com/amsmyth1) | [LinkedIn](https://www.linkedin.com/in/moralesalexa/)
 - [Jenny Branham](https://github.com/jbranham1) | [LinkedIn](https://www.linkedin.com/in/jenny-branham)
@@ -24,6 +33,7 @@ This project was tested with:
   - [Installing](#installing)
 - [Endpoints](#endpoints)
   - [Mail](#mail)
+- [Project Architecture](#project-architecture)  
 - [Testing](#testing)
 - [How to Contribute](#how-to-contribute)
 - [Roadmap](#roadmap)
@@ -39,6 +49,10 @@ These instructions will get you a copy of the project up and running on your loc
 * __Ruby__
 
   - The project is built with ruby using __ruby version 2.5.3p105__, you must install ruby on your local machine first. Please visit the [ruby](https://www.ruby-lang.org/en/documentation/installation/) home page to get set up. _Please ensure you install the version of ruby noted above._
+
+* __Sendgrid-Ruby Gem__
+
+  - This gem is included in the Gemfile and will be installed with the repo. However, it is used for the Sendgrid API communication. Please reference their [documentation](https://github.com/sendgrid/sendgrid-ruby) for how this gem interacts with Sendgrid.
 
 #### Installing
 
@@ -75,14 +89,15 @@ These instructions will get you a copy of the project up and running on your loc
   - examples:
     - post `http://localhost:4567/mail?to=email@gmail.com&from=myemail@hotmail.com&subject=BDAY BASH&content=You are Invited!`
 
+### Project Architecture
+<p style="text-align:center;"><img src="ys_design.png" width="600"></p>
+
 ### Testing
 ##### Running Tests
 - To run the full test suite run the below in your terminal:
 ```
 $ bundle exec rspec
 ```
-### Project Architecture
-<p style="text-align:center;"><img src="ys_design.png" width="600"></p>
 
 ### How to Contribute
 
@@ -101,7 +116,7 @@ See the [open issues](https://github.com/Yardsourcing/yardsourcing-sendgrid/issu
 ### Contributors
 - [Angel Breaux](https://github.com/abreaux26)
 - [Doug Welchons](https://github.com/DougWelchons/)
-- [Dominic Padula]() [LinkedIn]()
+- [Dominic Padula](https://github.com/domo2192)
 - [Jordan Beck](https://github.com/jordanfbeck0528)
 - [Alexa Morales Smyth](https://github.com/amsmyth1)
 - [Jenny Branham](https://github.com/jbranham1)
