@@ -98,8 +98,6 @@ These instructions will get you a copy of the project up and running on your loc
 ```
 $ bundle exec rspec
 ```
-### Project Architecture
-<p style="text-align:center;"><img src="ys_design.png" width="600"></p>
 
 ### How to Contribute
 
